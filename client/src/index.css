@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 221 47% 8%;
+    --foreground: 0 0% 100%;
+    
+    --card: 0 0% 100% / 0.05;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 221 47% 8%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 188 94% 43%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 100% / 0.1;
+    --muted-foreground: 0 0% 100% / 0.7;
+    
+    --accent: 258 90% 66%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 158 64% 52%;
+    --success-foreground: 0 0% 100%;
+    
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.1;
+    --ring: 258 90% 66%;
+    
+    --radius: 0.75rem;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .hover-elevate {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-elevate:hover {
+    @apply brightness-110;
+  }
+  
+  .active-elevate-2:active {
+    @apply brightness-125;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+  
+  .neon-glow-cyan {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+  }
+  
+  .input-glow:focus {
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  }
+}
